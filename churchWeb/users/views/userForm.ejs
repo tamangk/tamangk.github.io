@@ -1,0 +1,55 @@
+<%
+  if (user.id) {
+    submitLabel = "Update User";
+    route = `/users/${user.id}`;
+  } else {
+    submitLabel = "Create user";
+    route = "/users";
+  }
+%>
+<% if (user.errors.length > 0) { %>
+
+<% console.log("Found errors"); console.log(user.errors); %>
+
+<div>
+  <p>Errors:</p>
+  <ul>
+    <%- user.errors.map((item) => `<li>${item}</li>` ).join("\n"); %>
+  </ul>
+</div>
+<% } %>
+
+<form action="<%=route%>" accept-charset="UTF-8" method="post">
+  <div class="field">
+    <label for="user_lname">Last Name</label>
+    <input type="text" name="user[lname]" id="user_lname" value="<%= user.lname %>">
+  </div>
+
+  <div class=" field ">
+    <label for="user_fname ">First Name</label>
+    <textarea name="user[fname]" id="user_fname"><%= user.fname %></textarea>
+  </div>
+
+  <div class=" field ">
+    <label for="user_email ">Email</label>
+    <textarea name="user[email]" id="user_email"><%= user.email %></textarea>
+  </div>
+
+  <div class="field ">
+    <label for="user_status ">Status</label>
+    <select name="user[status]" id="user_status">
+        <option value="pastor">Pastor</option>
+        <option value="elder">Elder</option>
+        <option value="deacon">Deacon</option>
+        <option value="worship-leader">Worship-leader</option>
+        <option value="secretary">Secretary</option>
+        <option value="treasurer">Treasurer</option>
+        <option value="sunday-school-teacher">Sunday School Teacher</option>
+    </select>
+</div>
+
+  <div class="actions ">
+    <input type="submit" name="commit" value="<%= submitLabel %>" />
+  </div>
+
+</form>
