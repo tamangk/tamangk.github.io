@@ -116,6 +116,7 @@ body {
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
+        background-color: rgb(125, 140, 141);
         font-size: 22px;
     }
     .navbar a:hover {
@@ -123,7 +124,7 @@ body {
         color: black;
     }
     .navbar a.active {
-        background-color: #4CAF50;
+        background-color: rgb(110, 121, 110);
         color: rgb(255, 255, 255);
       }
     .navbar .icon {
