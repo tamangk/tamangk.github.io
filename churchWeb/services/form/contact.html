@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Form</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" /> -->
+
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='x-ua-compatible' content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .container {
+            position: absolute;
+            left: 25%;
+            right: 45%;
+            top: 20%;
+            font-size: 20px;
+        }
+        .text-center {
+            position: relative;
+            font-size: 40px;
+        }
+        .form-group {
+            position: relative;
+            /* width:100%; */
+        }
+        #userMessage {
+            height: 100px;
+        }
+        .form-control {
+            width: 150%;
+            height: 20px;
+        }
+        #submit {
+            height: 30px;
+            width: 70px;
+            border-radius: 10px;
+            font-size: large;
+            background-color: rgb(198, 218, 198);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-color">
+        <span class="social-media">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </span>
+        <span class="navbar">
+            <a href="../../index.html">Home</a>
+            <a href="../../event/event.html">Event</a>
+            <div class="dropdown">
+                <a href="contact.html">Service</a>
+                <div class="dropdown-content">
+                    <a href="../resources.html">Resources</a>
+                    <a href="contact.html">Prayer Request</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="">About us</a>
+                <div class="dropdown-content">
+                    <a href="../../aboutus/mission-vision.html">Mission &Vison</a>
+                    <a href="../../aboutus/leaders.html">Leaders</a>
+                </div>
+            </div>
+            <a href="https://www.paypal.me/" target="_blank">Donate</a>
+        </span>
+
+        <span class="logo">
+            <a href="../../index.html"><img src="../../images/logo.png" alt="logo" width="120" height="115"></a>
+            <h4><a href="../../index.html">Word and Revival Ministry</a></h4>
+        </span>
+    </div>
+
+    <div class="container">
+        <form>
+            <h4 class="text-center">Contact Form</h4>
+            <div class="form-group">
+                <label for="Name">Full Name</label>
+                <input type="text" name="Full Name" id="userFullName" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="Email" name="Email" id="userEmail" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="Message">Message</label>
+                <textarea name="Message" id="userMessage" class="form-control"></textarea>
+            </div>
+            <button id="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-firestore.js"></script>
+    <script src="app.js"></script>
+
+    <footer>
+        <div class="site-footer">
+            <span class="address">
+                <h3>Address</h3>
+                <p>Phone: (517) 703 6550</p>
+                <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
+            </span>
+
+            <span class="widget-aboutus">
+                <h3>About us</h3>
+                <div>
+                    <a href="../../aboutus/mission-vision.html">Our Vison</a>
+                </div>
+                <div>
+                    <a href="../../aboutus/mission-vision.html">Our Mission</a>
+                </div>
+                <div>
+                    <a href="../../aboutus/leaders.html">Pastor and Leaders</a>
+                </div>
+            </span>
+
+            <span class="widget-service">
+                <h3>Service</h3>
+                <div>
+                    <a href="../resources.html">Resources</a>
+                </div>
+                <div>
+                    <a href="contact.html">Prayer Request</a>
+                </div>
+            </span>
+        </div>
+        <span class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</span>
+    </footer>
+
+</body>
+
+</html>
