@@ -1,0 +1,51 @@
+
+/* body {
+    background-color: paleturquoise;
+} */
+
+.game-parts {
+    text-align: center;
+    margin-right: 25%;
+    margin-left: 25%;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#text-area {
+    margin-top: 60px;
+}
+
+.java-scripts {
+    padding-left: 50%;
+}
+#new-game-button {
+    width: 140px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#hit-button {
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#stay-button {
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#quit-button {
+    width: 60px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* .image {
+    margin-top: 10px;
+} */
