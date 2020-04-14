@@ -7,202 +7,70 @@
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <meta http-equiv='x-ua-compatible' content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="http://localhost:5500/churchWeb/style.css">
 
     <style>
-        body {
-            margin: 0;
-        }
-
         .top-color {
-            background-color: rgb(22, 176, 228);
-            position: absolute;
-            height: 110px;
-            width: 100%;
-            margin: 0;
             top: 0;
         }
-
-        .navbar {
-            position: absolute;
-            right: 60px;
-            top: 35%;
-            display: flex;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            padding-right: 10px;
-            font-weight: bold;
-            color: black;
-            padding-right: 30px;
-        }
-
-        .navbar a:hover {
-            color: rgb(247, 6, 66);
-        }
-
-        .logo {
-            position: absolute;
-            float: left;
-            left: 10%;
-            height: 110px;
-        }
-
-        .logo a {
-            position: relative;
-            bottom: 2px;
-        }
-
-        .logo h4 a {
-            font-size: 25px;
+        h1 {
             text-align: center;
-            position: absolute;
-            left: 130px;
-            top: 20px;
-            width: 200px;
-            color: black;
-            text-decoration: none;
+        }
+        .newUser {
+            border: 1px solid black;
+        }
+        .newUser a:hover {
+            color: red;
         }
 
-        /*********************************************************
-        * DROPDOWN
-        *********************************************************/
-
-        .dropdown {
-            float: left;
-            overflow: hidden;
-        }
-
-        .dropdown .dropbtn {
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            outline: none;
-            color: rgb(0, 0, 0);
-            font-family: inherit;
-            margin: 0;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #918f8f;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(65, 60, 60, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            float: none;
-            color: rgb(240, 229, 229);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: rgb(224, 209, 209);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .container {
-            position: relative;
-            top: 200px;
-            left: 25%;
-        }
-
-        th {
-            font-size: 25px;
-            text-align: left;
-            text-decoration: underline;
-        }
-
-        footer {
-            position: absolute;
-            bottom: 0;
-            height: 20px;
-            width: 100%;
-        }
-
-        .site-footer {
-            width: 100%;
-            bottom: 0px;
-            height: 200px;
-            text-decoration: none;
-            background-color: lightslategray;
-        }
-
-        .address {
-            position: absolute;
-            font-size: 20px;
-            float: left;
-            left: 10%;
-            /* background-color: rgb(216, 79, 79); */
-        }
-
-        .widget-aboutus {
-            position: absolute;
-            left: 45%;
-            /* background-color: rgb(150, 214, 125); */
-        }
-
-        .widget-service {
-            position: absolute;
-            right: 20%;
-            /* background-color: blanchedalmond; */
-        }
-
-        span a {
-            text-decoration: none;
-            color: black;
-            font-size: 18px;
-        }
-
-        .copy-right {
-            position: absolute;
-            width: 100%;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            text-align: center;
-            background-color: rgb(95, 102, 109);
-        }
     </style>
 </head>
 
 <body>
 
     <div class="top-color">
+        <div class="logo">
+            <div class="png">
+                <a href="http://localhost:5500/churchWeb/index.html"><img src="http://localhost:5500/churchWeb/images/logo.png" alt="logo" width="100px" height="100px"></a>
+            </div>
+            <div class="title">
+                <a href="http://localhost:5500/churchWeb/index.html">Word and Revival Ministry</a>
+            </div>
+        </div>
         <span class="navbar">
-            <a href="">Home</a>
-            <a href="">Event</a>
+            <a href="http://localhost:5500/churchWeb/index.html">Home</a>
+            <a href="http://localhost:5500/churchWeb/event/event.html">Event</a>
             <div class="dropdown">
                 <a href="">Service</a>
                 <div class="dropdown-content">
-                    <a href="">Resources</a>
-                    <a href="">Prayer Request</a>
+                    <a href="http://localhost:5500/churchWeb/services/resources.html">Resources</a>
+                    <a href="http://localhost:5500/churchWeb/services/contact.html">Prayer Request</a>
                 </div>
             </div>
             <div class="dropdown">
                 <a href="">About us</a>
                 <div class="dropdown-content">
-                    <a href="">Mission &Vison</a>
-                    <a href="">Leaders</a>
+                    <a href="http://localhost:5500/churchWeb/aboutus/mission-vision.html">Mission &Vison</a>
+                    <a href="http://localhost:3000/leaders">Leaders</a>
                 </div>
             </div>
             <a href="https://www.paypal.me/" target="_blank">Donate</a>
         </span>
-
-        <span class="logo">
-            <h4><a href="">Word and Revival Ministry</a></h4>
-        </span>
     </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
     <div class="container">
         <h1>Listing Leaders</h1>
-
+        <div id="div1">
         <table>
             <tr>
                 <th>Status</th>
@@ -234,41 +102,42 @@
             </tr>
             <% }) %>
         </table>
-        <a href="/users/new">New User</a>
+        <span class="newUser"><a href="/users/new">New User</a></span>
+    </div>
     </div>
 
-    <footer>
-        <div class="site-footer">
-            <span class="address">
-                <h3>Address</h3>
-                <p>Phone: (517) 703 6550</p>
-                <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
-            </span>
+    <footer role="contentinfo" class="grid-item">
+        <div id="foot">
+            <div class="site-footer">
+                <div class="widget address">
+                    <h3>Address</h3>
+                    <p>Phone: (517) 703 6550</p>
+                    <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
+                </div>
+                <div class="widget event">
+                    <h3>Events</h3>
+                    <a href="http://localhost:5500/churchWeb/event/event.html">Upcoming events</a>
+                </div>
+                <div class="widget aboutus">
+                    <h3>About us</h3>
+                    <div><a href="http://localhost:5500/churchWeb/aboutus/mission-vision.html">Our Vison</a></div>
+                    <a href="http://localhost:3000/leaders">Pastor and Leaders</a>
+                </div>
+                <div class="widget service">
+                    <h3>Service</h3>
+                    <div><a href="http://localhost:5500/churchWeb/services/resources.html">Resources</a></div>
+                    <a href="http://localhost:5500/churchWeb/services/form/contact.html">Prayer Request</a>
+                </div>
+                <div class="widget social-media">
+                    <h3>Follow us</h3>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
 
-            <span class="widget-aboutus">
-                <h3>About us</h3>
-                <div>
-                    <a href="">Our Vison</a>
-                </div>
-                <div>
-                    <a href="">Our Mission</a>
-                </div>
-                <div>
-                    <a href="">Pastor and Leaders</a>
-                </div>
-            </span>
-
-            <span class="widget-service">
-                <h3>Service</h3>
-                <div>
-                    <a href="">Resources</a>
-                </div>
-                <div>
-                    <a href="">Prayer Request</a>
-                </div>
-            </span>
+            <div class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</div>
         </div>
-        <span class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</span>
     </footer>
 
 </body>

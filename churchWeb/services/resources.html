@@ -5,87 +5,88 @@
   <title>Word and Revival Ministry</title>
   <meta charset="utf-8">
   <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-  <meta http-equiv='x-ua-compatible' content="ie=edge">  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta http-equiv='x-ua-compatible' content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    .top-color {
-      top: 0px;
-    }
     .resources {
       position: relative;
-      top: 150px;
-      font-size: 30px;
+      font-size: 20px;
+      width: 90%;
+      left: 7%;
     }
-    .resources a:hover {
-      background-color: aquamarine;
-    }
-
-    .bible {
-      position: absolute;
-      left: 15%;
-    }
-
-    .bhajan {
-      position: absolute;
-      left: 40%;
+    .col {
+      display: inline-table;
+      left: 10px;
+      padding-left: 5%;
+      /* border: 1px solid; */
     }
 
-    .books {
-      position: absolute;
-      left: 75%;
+    li a:hover {
+      color: red;
     }
-
-    .others {
-      position: relative;
-      top: 250px;
-      text-align: center;
+    #foot {
+      position: fixed;
+      bottom: 0;
     }
   </style>
 </head>
 
 <body>
-  <div class="top-color">
-    <span class="social-media">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-youtube"></a>
-        <a href="#" class="fa fa-instagram"></a>
-    </span>
-    <span class="navbar">
-      <a href="../index.html">Home</a>
-      <a href="../event/event.html">Event</a>
-      <div class="dropdown">
-        <a href="">Service</a>
-        <div class="dropdown-content">
-          <a href="../services/resources.html">Resources</a>
-          <a href="..//services/form/contact.html">Prayer Request</a>
+  <header role="banner" class="grid-item">
+    <div class="top-color">
+      <div class="logo">
+        <div class="png">
+            <a href="index.html"><img src="images/logo.png" alt="logo" width="100px" height="100px"></a>
         </div>
-      </div>
-      <div class="dropdown">
-        <a href="">About us</a>
-        <div class="dropdown-content">
-          <a href="../aboutus/mission-vision.html">Mission &Vison</a>
-          <a href="../aboutus/leaders.html">Leaders</a>
+        <div class="title">
+            <a href="index.html">Word and Revival Ministry</a>
         </div>
-      </div>
-      <a href="https://www.paypal.me/" target="_blank">Donate</a>
-    </span>
+    </div>
+      <span class="navbar" id="myNavbar">
+        <a href="../index.html" class="active">Home</a>
+        <a href="../event/event.html">Event</a>
+        <div class="dropdown">
+          <a href="">Service</a>
+          <div class="dropdown-content">
+            <a href="resources.html">Resources</a>
+            <a href="form/contact.html">Prayer Request</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="">About us</a>
+          <div class="dropdown-content">
+            <a href="../aboutus/mission-vision.html">Mission &Vison</a>
+            <a href="http://localhost:3000/leaders">Leaders</a>
+          </div>
+        </div>
+        <a href="https://www.paypal.me/" target="_blank">Donate</a>
+        <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </span>
+    </div>
+  </header>
 
-    <span class="logo">
-      <a href="../index.html"><img src="../images/logo.png" alt="logo" width="120" height="115"></a>
-      <h4><a href="../index.html">Word and Revival Ministry</a></h4>
-    </span>
-  </div>
+  <script>
+    function myFunction() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+</script>
 
   <div class="resources">
     <h2 style="text-align: center;">Resources</h2>
 
-    <div class="bible">
+    <div class="col bible">
       <h3 style="text-decoration: underline;">Bible</h3>
       <li><a href="https://www.bible.com/bible/1483/MAT.4.NNRV" target="_blank"
           style="text-decoration: none; color: black;">Nepali Bible</a></li>
     </div>
 
-    <div class="bhajan">
+    <div class="col bhajan">
       <h3 style="text-decoration: underline;">Bhajan</h3>
       <li><a href="/resource/Christiya Bajan.pdf" target="_blank" style="text-decoration: none; color: black;">Christian
           Bhajan</a></li>
@@ -93,50 +94,50 @@
           style="text-decoration: none; color: black;">Nepali Christian Songs</a></li>
     </div>
 
-    <div class="books">
+    <div class="col books">
       <h3 style="text-decoration: underline;">Books</h3>
     </div>
 
-    <div class="others">
+    <div class="col others">
       <h3 style="text-decoration: underline;">Other Resources</h3>
       <li><a href="example" target="_blank" style="text-decoration: none; color: black;">Example</a></li>
     </div>
 
   </div>
 
-  <footer>
+  <footer role="contentinfo" class="grid-item">
+    <div id="foot">
     <div class="site-footer">
-        <span class="address">
-            <h3>Address</h3>
-            <p>Phone: (517) 703 6550</p>
-            <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
-        </span>
-
-        <span class="widget-aboutus">
-            <h3>About us</h3>
-            <div>
-                <a href="../aboutus/mission-vision.html">Our Vison</a>
-            </div>
-            <div>
-                <a href="../aboutus/mission-vision.html">Our Mission</a>
-            </div>
-            <div>
-                <a href="../aboutus/leaders.html">Pastor and Leaders</a>
-            </div>
-        </span>
-
-        <span class="widget-service">
-            <h3>Service</h3>
-            <div>
-                <a href="resources.html">Resources</a>
-            </div>
-            <div>
-                <a href="form/contact.html">Prayer Request</a>
-            </div>
-        </span>
+      <div class="widget address">
+        <h3>Address</h3>
+        <p>Phone: (517) 703 6550</p>
+        <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
+      </div>
+      <div class="widget event">
+        <h3>Events</h3>
+        <a href="../event/event.html">Upcoming events</a>
+      </div>
+      <div class="widget aboutus">
+        <h3>About us</h3>
+        <div><a href="../aboutus/mission-vision.html">Our Vison</a></div>
+        <a href="http://localhost:3000/leaders">Pastor and Leaders</a>
+      </div>
+      <div class="widget service">
+        <h3>Service</h3>
+        <div><a href="resources.html">Resources</a></div>
+        <a href="form/contact.html">Prayer Request</a>
+      </div>
+      <div class="widget social-media">
+        <h3>Follow us</h3>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
     </div>
-    <span class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</span>
-</footer>
+
+    <div class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</div>
+  </div>
+  </footer>
 
 </body>
 

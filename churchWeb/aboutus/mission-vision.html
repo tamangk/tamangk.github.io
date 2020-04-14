@@ -8,87 +8,123 @@
     <meta http-equiv='x-ua-compatible' content="ie=edge">
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .aboutus-list {
+        display: inline-flex;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        top: 100px;
+    }
+    .mission {
+        position: absolute;
+        left: 20%;
+        width: 20%;
+    }
+    .vision {
+        position: relative;
+        width: 20%;
+        left: 60%;
+    }
+    #foot {
+        position: fixed;
+        bottom: 0;
+    }
+</style>
+
 </head>
 
 <body>
-
-    <div class="top-color">
-    <span class="social-media">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-youtube"></a>
-        <a href="#" class="fa fa-instagram"></a>
-    </span>
-        <span class="navbar">
-            <a href="../index.html">Home</a>
-            <a href="../event/event.html">Event</a>
-            <div class="dropdown">
-                <a href="">Service</a>
-                <div class="dropdown-content">
-                  <a href="../services/form/contact.html">Prayer Request</a>
-                  <a href="../event/event.html">Upcoming Event</a>
+    <header role="banner" class="grid-item">
+        <div class="top-color">
+            <div class="logo">
+                <div class="png">
+                    <a href="../index.html"><img src="../images/logo.png" alt="logo" width="100px" height="100px"></a>
+                </div>
+                <div class="title">
+                    <a href="../index.html">Word and Revival Ministry</a>
                 </div>
             </div>
-            <div class="dropdown">
-                <a href="">About us</a>
-                <div class="dropdown-content">
-                    <a href="mission-vision.html">Mission|Vison</a>
-                    <a href="leaders.html">Leaders</a>
+            <span class="navbar" id="myNavbar">
+                <a href="../index.html" class="active">Home</a>
+                <a href="../event/event.html">Event</a>
+                <div class="dropdown">
+                    <a href="">Service</a>
+                    <div class="dropdown-content">
+                        <a href="../services/resources.html">Resources</a>
+                        <a href="../services/form/contact.html">Prayer Request</a>
+                    </div>
                 </div>
-            </div>
-            <a href="https://www.paypal.me/" target="_blank">Donate</a>
-        </span>
+                <div class="dropdown">
+                    <a href="">About us</a>
+                    <div class="dropdown-content">
+                        <a href="mission-vision.html">Mission &Vison</a>
+                        <a href="http://localhost:3000/leaders">Leaders</a>
+                    </div>
+                </div>
+                <a href="https://www.paypal.me/" target="_blank">Donate</a>
 
-        <span class="logo">
-            <a href="../index.html"><img src="../images/logo.png" alt="logo" width="120" height="115"></a>
-            <h4><a href="../index.html">Word and Revival Ministry</a></h4>
-        </span>
-    </div>
+                <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </span>
+        </div>
+    </header>
 
-    <span class="aboutus-list">
-        <span class="vision">
+    <div class="aboutus-list">
+        <div class="vision">
             <h3 style="text-decoration: underline"> Our Vision</h3>
             <p>I'm a paragraph. There are still need to add more about
                 vison. This is just for place holder. </p>
-        </span>
-        <span class="mission">
+        </div>
+        <div class="mission">
             <h3 style="text-decoration: underline">Our Mission</h3>
             <p>I'm a paragraph. There are still need to add more about
                 mission. This is just for place holder.</p>
-        </span>
-    </span>
-
-    <footer>
-        <div class="site-footer">
-            <span class="address">
-                <h3>Address</h3>
-                <p>Phone: (517) 703 6550</p>
-                <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
-            </span>
-
-            <span class="widget-aboutus">
-                <h3>About us</h3>
-                <div>
-                    <a href="mission-vision.html">Our Vison</a>
-                </div>
-                <div>
-                    <a href="mission-vision.html">Our Mission</a>
-                </div>
-                <div>
-                    <a href="leaders.html">Pastor and Leaders</a>
-                </div>
-            </span>
-
-            <span class="widget-service">
-                <h3>Service</h3>
-                <div>
-                    <a href="../services/resources.html">Resources</a>
-                </div>
-                <div>
-                    <a href="../services/form/contact.html">Prayer Request</a>
-                </div>
-            </span>
         </div>
-        <span class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</span>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+    <footer role="contentinfo" class="grid-item">
+        <div id="foot">
+            <div class="site-footer">
+                <div class="widget address">
+                    <h3>Address</h3>
+                    <p>Phone: (517) 703 6550</p>
+                    <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
+                </div>
+                <div class="widget event">
+                    <h3>Events</h3>
+                    <a href="aboutus/mission-vision.html">Upcoming events</a>
+                </div>
+                <div class="widget aboutus">
+                    <h3>About us</h3>
+                    <div><a href="aboutus/mission-vision.html">Our Vison</a></div>
+                    <a href="/leaders">Pastor and Leaders</a>
+                </div>
+                <div class="widget service">
+                    <h3>Service</h3>
+                    <div><a href="services/resources.html">Resources</a></div>
+                    <a href="services/form/contact.html">Prayer Request</a>
+                </div>
+                <div class="widget social-media">
+                    <h3>Follow us</h3>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+
+            <div class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</div>
+        </div>
     </footer>
 
 </body>

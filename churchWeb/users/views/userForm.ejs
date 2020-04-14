@@ -22,17 +22,18 @@
 <form action="<%=route%>" accept-charset="UTF-8" method="post">
   <div class="field">
     <label for="user_lname">Last Name</label>
-    <input type="text" name="user[lname]" id="user_lname" value="<%= user.lname %>">
+    <input type="text" name="user[lname]" id="user_lname" value="<%= user.lname %>" class="form-control">
   </div>
 
   <div class=" field ">
     <label for="user_fname ">First Name</label>
-    <textarea name="user[fname]" id="user_fname"><%= user.fname %></textarea>
+    <input type="text" name="user[fname]" id="user_fname" value="<%= user.fname %>" class="form-control">
   </div>
 
   <div class=" field ">
     <label for="user_email ">Email</label>
-    <textarea name="user[email]" id="user_email"><%= user.email %></textarea>
+    <input type="text" name="user[email]" id="user_email" value="<%= user.email %>" class="form-control">
+
   </div>
 
   <div class="field ">
@@ -49,7 +50,7 @@
 </div>
 
   <div class="actions ">
-    <input type="submit" name="commit" value="<%= submitLabel %>" />
+    <input type="submit" name="commit" value="<%= submitLabel %>">
   </div>
 
 </form>

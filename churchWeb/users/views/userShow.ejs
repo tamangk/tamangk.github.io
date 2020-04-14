@@ -1,33 +1,130 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <title>Word and Revival Ministry</title>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='x-ua-compatible' content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="http://localhost:5500/churchWeb/style.css">
+
     <style>
         .label {
             display: inline-block;
             width: 6em;
         }
+        .div2 {
+            /* border: 1px solid; */
+            width: 90%;
+            position: absolute;
+            left: 10%;
+        }
+
     </style>
 </head>
 
 <body>
 
-    <span><span class='label'>Last Name:</span>
-  <%= user.lname %>
-  </span><br>
-      <span><span class='label'>First Name:</span>
-      <%= user.fname %>
-      </span><br>
-          <span><span class='label'>Email:</span>
-          <%= user.email %>
-          </span><br>
-              <span><span class='label'>Status:</span>
-              <%= user.status %>
-              </span><br>
+    <div class="top-color">
+        <div class="logo">
+            <div class="png">
+                <a href="http://localhost:5500/churchWeb/index.html"><img src="http://localhost:5500/churchWeb/images/logo.png" alt="logo" width="100px" height="100px"></a>
+            </div>
+            <div class="title">
+                <a href="http://localhost:5500/churchWeb/index.html">Word and Revival Ministry</a>
+            </div>
+        </div>
+        <span class="navbar">
+            <a href="http://localhost:5500/churchWeb/index.html">Home</a>
+            <a href="http://localhost:5500/churchWeb/event/event.html">Event</a>
+            <div class="dropdown">
+                <a href="">Service</a>
+                <div class="dropdown-content">
+                    <a href="http://localhost:5500/churchWeb/services/resources.html">Resources</a>
+                    <a href="http://localhost:5500/churchWeb/services/contact.html">Prayer Request</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="">About us</a>
+                <div class="dropdown-content">
+                    <a href="http://localhost:5500/churchWeb/aboutus/mission-vision.html">Mission &Vison</a>
+                    <a href="http://localhost:3000/leaders">Leaders</a>
+                </div>
+            </div>
+            <a href="https://www.paypal.me/" target="_blank">Donate</a>
+        </span>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+
+    <div class="container">
+        <div id="div1">
+            <div class="div2">
+                <div class="div-show">
+                    <span><span class='label'>Last Name:</span>
+                        <%= user.lname %>
+                    </span><br>
+                    <span><span class='label'>First Name:</span>
+                        <%= user.fname %>
+                    </span><br>
+                    <span><span class='label'>Email:</span>
+                        <%= user.email %>
+                    </span><br>
+                    <span><span class='label'>Status:</span>
+                        <%= user.status %>
+                    </span><br>
 
                     <p>
                         <a href="/users">Back</a>
                         <a href="/users/<%= user.id %>/edit">Edit</a>
                     </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo" class="grid-item">
+        <div id="foot">
+            <div class="site-footer">
+                <div class="widget address">
+                    <h3>Address</h3>
+                    <p>Phone: (517) 703 6550</p>
+                    <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
+                </div>
+                <div class="widget event">
+                    <h3>Events</h3>
+                    <a href="http://localhost:5500/churchWeb/event/event.html">Upcoming events</a>
+                </div>
+                <div class="widget aboutus">
+                    <h3>About us</h3>
+                    <div><a href="http://localhost:5500/churchWeb/aboutus/mission-vision.html">Our Vison</a></div>
+                    <a href="http://localhost:3000/leaders">Pastor and Leaders</a>
+                </div>
+                <div class="widget service">
+                    <h3>Service</h3>
+                    <div><a href="http://localhost:5500/churchWeb/services/resources.html">Resources</a></div>
+                    <a href="http://localhost:5500/churchWeb/services/form/contact.html">Prayer Request</a>
+                </div>
+                <div class="widget social-media">
+                    <h3>Follow us</h3>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+
+            <div class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</div>
+        </div>
+    </footer>
 </body>
 
 </html>
