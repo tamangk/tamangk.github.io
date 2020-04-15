@@ -2,7 +2,7 @@
 /* header {
     min-height: 130px;
 } */
-@media (min-height: 480px) {
+/* @media (min-height: 480px) {
     header {
         position: -webkit-sticky;
         position: sticky;
@@ -13,7 +13,7 @@
     header {
         position: static;
     }
-}
+} */
 footer {
     /* min-height: 130px; */
     width: 100%;
@@ -94,7 +94,7 @@ body {
       float: left;
       display: block;
       top: 0;
-      right: 0px;
+      right: 0;
     }
     .navbar {
         width: 25%;
@@ -106,6 +106,18 @@ body {
     .navbar a.hover {
         color: #66ff00;
     }
+    /* footer {
+        position: fixed;
+        bottom: 0;
+    }
+    .site-footer {
+        border: 2px sold red;
+    } */
+    /* .widget {
+        position: relative;
+        display: inline-table;
+        padding-left: 25%;
+    } */
 }
 @media screen and (max-width: 600px) {
     .title {
@@ -121,10 +133,19 @@ body {
         text-align: left;
         color: white;
     }
+    .navbar a {
+        color: white;
+    }
     .navbar a:hover {
         color: #0af502;
     }
-
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+    .site-footer {
+        border: 1px sold red;
+    }
 }
 /*********************************************************
 * DROPDOWN
@@ -172,25 +193,28 @@ body {
 * WELCOME
 *********************************************************/
 .welcome {
-    text-align: center;
+    text-align: justify;
     position: relative;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
     font-size: 18px;
 }
+.welcome h3 {
+    text-align: center;
+}
+
 /*********************************************************
 * FOOTER
 *********************************************************/
-#foot {
+footer {
+    /* border: 1px solid red; */
     position: relative;
-    bottom: 0;
-    width: 100%;
+    bottom: 0%;
     background-color: lightslategray;
 }
 .site-footer {
     position: relative;
-    width: 95%;
-    left: 2%;
+    width: 100%;
     bottom: 0;
     text-decoration: none;
 }
@@ -264,18 +288,25 @@ span a {
 /*********************************************************
 * EVENT
 /********************************************************* */
-.col {
+.event-container {
     position: relative;
+    height: 20%;
+    top: 20px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.col {
+    position: absolute;
     display: inline-table;
     width: 40%;
 }
 .left {
-    position: absolute;
+    position: relative;
     left: 10%;
 }
 .right {
-    position: absolute;
-    left: 55%;
+    position: relative;
+    left: 15%;
 }
 .media .dateEl {
     display: flex;
@@ -319,36 +350,87 @@ span a {
 * Users EJS
 /********************************************************* */
 
-.container {
+.ejs-container {
     position: relative;
-    /* top: 20px; */
-    width: 100%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    /* border: 1px solid; */
+    padding-top: 5%;
 
 }
-#div1 {
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    /* border: 1px solid; */
+.div1 {
+    position: relative;
+    left: 15%;
+    width: 80%;
+    padding-top: 10%;
 }
 table {
     position: relative;
-    left: 10%;
-    right: 15%;
     width: 80%;
+    padding-bottom: 20%;
 }
 th {
     font-size: 25px;
     text-align: left;
     text-decoration: underline;
 }
+
+h1 {
+    text-align: center;
+}
+label {
+    display: block;
+    font-size: 30px;
+    color: red;
+}
+.div2 {
+    position: absolute;
+    width: 70%;
+    left: 20%;
+}
+.div2 a {
+    font-size: 25px;
+}
+.div-edit {
+    position: relative;
+    width: 60%;
+    left: 20%;
+    padding-bottom: 30%;
+}
 .div-show {
     position: relative;
-    width: 50%;
+    width: 60%;
     left: 30%;
     font-size: 25px;
-    /* border: 1px solid; */
+    padding-top: 10%;
+    padding-bottom: 30%;
+}
+.div-show p {
+    position: relative;
+    padding-top: 10%;
+}
+.div-index {
+    position: relative;
+    width: 90%;
+    left: 8%;
+}
+.field {
+    position: relative;
+    font-size: 20px;
+}
+.form-control {
+    width: 80%;
+    height: 30px;
+    font-size: 20px;
+}
+select {
+    height: 30px;
+    font-size: 20px;
+}
+.actions {
+    height: 25px;
+    font-size: 20px;
+}
+input {
+    font-size: 20px;
 }

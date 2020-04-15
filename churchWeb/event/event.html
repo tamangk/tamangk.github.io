@@ -10,20 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../style.css">
 
-    <style>
-        .top-color {
-            top: 0;
-        }
-
-        .container {
-            position: absolute;
-            top: 105px;
-        }
-        #foot {
-            position: fixed;
-            bottom: 0;
-        }
-    </style>
 </head>
 
 <script>
@@ -37,40 +23,38 @@
     }
 </script>
 
-<body class="gird">
-    <header role="banner" class="grid-item">
-        <div class="top-color">
-            <div class="logo">
-                <div class="png">
-                    <a href="../index.html"><img src="../images/logo.png" alt="logo" width="100px" height="100px"></a>
-                </div>
-                <div class="title">
-                    <a href="../index.html">Word and Revival Ministry</a>
+<body>
+    <div class="top-color">
+        <div class="logo">
+            <div class="png">
+                <a href="../index.html"><img src="../images/logo.png" alt="logo" width="100px" height="100px"></a>
+            </div>
+            <div class="title">
+                <a href="../index.html">Word and Revival Ministry</a>
+            </div>
+        </div>
+        <span class="navbar" id="myNavbar">
+            <a href="../index.html" class="active">Home</a>
+            <a href="event.html">Event</a>
+            <div class="dropdown">
+                <a href="">Service</a>
+                <div class="dropdown-content">
+                    <a href="../services/resources.html">Resources</a>
+                    <a href="../services/form/contact.html">Prayer Request</a>
                 </div>
             </div>
-            <span class="navbar" id="myNavbar">
-                <a href="../index.html" class="active">Home</a>
-                <a href="event.html">Event</a>
-                <div class="dropdown">
-                    <a href="">Service</a>
-                    <div class="dropdown-content">
-                        <a href="../services/resources.html">Resources</a>
-                        <a href="../services/form/contact.html">Prayer Request</a>
-                    </div>
+            <div class="dropdown">
+                <a href="">About us</a>
+                <div class="dropdown-content">
+                    <a href="../aboutus/mission-vision.html">Mission &Vison</a>
+                    <a href="http://localhost:3000/leaders">Leaders</a>
                 </div>
-                <div class="dropdown">
-                    <a href="">About us</a>
-                    <div class="dropdown-content">
-                        <a href="../aboutus/mission-vision.html">Mission &Vison</a>
-                        <a href="http://localhost:3000/leaders">Leaders</a>
-                    </div>
-                </div>
-                <a href="https://www.paypal.me/" target="_blank">Donate</a>
+            </div>
+            <a href="https://www.paypal.me/" target="_blank">Donate</a>
 
-                <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
-            </span>
-        </div>
-    </header>
+            <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+        </span>
+    </div>
 
     <script>
         function myFunction() {
@@ -83,7 +67,7 @@
         }
     </script>
     <!-- ----------------------------------------------------------------- -->
-    <div class="container">
+    <div class="event-container">
         <div class="col left">
             <div class="media">
                 <a class="pull-left" href="#"><span class="dateEl"><em>27</em>Nov</span></a>
@@ -184,34 +168,32 @@
 
     <!-- ----------------------------------------------------------------- -->
 
-    <footer role="contentinfo" class="grid-item">
-        <div id="foot">
-            <div class="site-footer">
-                <div class="widget address">
-                    <h3>Address</h3>
-                    <p>Phone: (517) 703 6550</p>
-                    <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
-                </div>
-                <div class="widget event">
-                    <h3>Events</h3>
-                    <a href="event.html">Upcoming events</a>
-                </div>
-                <div class="widget aboutus">
-                    <h3>About us</h3>
-                    <div><a href="../aboutus/mission-vision.html">Our Vison</a></div>
-                    <a href="http://localhost:3000/leaders">Pastor and Leaders</a>
-                </div>
-                <div class="widget service">
-                    <h3>Service</h3>
-                    <div><a href="../services/resources.html">Resources</a></div>
-                    <a href="../services/form/contact.html">Prayer Request</a>
-                </div>
-                <div class="widget social-media">
-                    <h3>Follow us</h3>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                </div>
+    <footer>
+        <div class="site-footer">
+            <div class="widget address">
+                <h3>Address</h3>
+                <p>Phone: (517) 703 6550</p>
+                <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
+            </div>
+            <div class="widget event">
+                <h3>Events</h3>
+                <a href="aboutus/mission-vision.html">Upcoming events</a>
+            </div>
+            <div class="widget aboutus">
+                <h3>About us</h3>
+                <div><a href="aboutus/mission-vision.html">Our Vison</a></div>
+                <a href="http://localhost:3000/leaders">Pastor and Leaders</a>
+            </div>
+            <div class="widget service">
+                <h3>Service</h3>
+                <div><a href="services/resources.html">Resources</a></div>
+                <a href="services/form/contact.html">Prayer Request</a>
+            </div>
+            <div class="widget social-media">
+                <h3>Follow us</h3>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
             </div>
             <div class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</div>
         </div>

@@ -10,41 +10,40 @@
     <link rel="stylesheet" type="text/css" href="http://localhost:5500/churchWeb/style.css">
 
     <style>
-        .top-color {
-            top: 0;
-        }
-        h1 {
-            text-align: center;
-        }
         .newUser {
-            border: 1px solid black;
+            position: absolute;
+            top: -10%;
+            border: 1px solid;
+        }
+        .newUser a{
+            color: red
         }
         .newUser a:hover {
-            color: red;
+            color: rgb(38, 233, 20);
         }
-
     </style>
 </head>
 
 <body>
-
     <div class="top-color">
         <div class="logo">
             <div class="png">
-                <a href="http://localhost:5500/churchWeb/index.html"><img src="http://localhost:5500/churchWeb/images/logo.png" alt="logo" width="100px" height="100px"></a>
+                <a href="http://localhost:5500/churchWeb/index.html">
+                    <img src="http://localhost:5500/churchWeb/images/logo.png" alt="logo" width="100px"
+                        height="100px"></a>
             </div>
             <div class="title">
                 <a href="http://localhost:5500/churchWeb/index.html">Word and Revival Ministry</a>
             </div>
         </div>
-        <span class="navbar">
-            <a href="http://localhost:5500/churchWeb/index.html">Home</a>
+        <span class="navbar" id="myNavbar">
+            <a href="http://localhost:5500/churchWeb/index.html" class="active">Home</a>
             <a href="http://localhost:5500/churchWeb/event/event.html">Event</a>
             <div class="dropdown">
                 <a href="">Service</a>
                 <div class="dropdown-content">
                     <a href="http://localhost:5500/churchWeb/services/resources.html">Resources</a>
-                    <a href="http://localhost:5500/churchWeb/services/contact.html">Prayer Request</a>
+                    <a href="http://localhost:5500/churchWeb/services/form/contact.html">Prayer Request</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -55,6 +54,8 @@
                 </div>
             </div>
             <a href="https://www.paypal.me/" target="_blank">Donate</a>
+
+            <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
         </span>
     </div>
 
@@ -68,74 +69,72 @@
             }
         }
     </script>
-    <div class="container">
+
+    <div class="ejs-container">
         <h1>Listing Leaders</h1>
-        <div id="div1">
-        <table>
-            <tr>
-                <th>Status</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-            </tr>
+        <div class="div-index">
+            <table>
+                <tr>
+                    <th>Status</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
 
-            <% users.forEach( (user) => { %>
-            <tr>
-                <td>
-                    <%= user.status %>
-                </td>
-                <td>
-                    <%= user.fname %>
-                </td>
-                <td>
-                    <%= user.lname %>
-                </td>
-                <td>
-                    <%= user.email %>
-                </td>
+                <% users.forEach( (user) => { %>
+                <tr>
+                    <td>
+                        <%= user.status %>
+                    </td>
+                    <td>
+                        <%= user.fname %>
+                    </td>
+                    <td>
+                        <%= user.lname %>
+                    </td>
+                    <td>
+                        <%= user.email %>
+                    </td>
 
-                <td>
-                    <a href="/users/<%= user.id %>">Show</a>
-                    <a href="/users/<%= user.id %>/edit">Edit</a>
-                    <a href="/users/<%= user.id %>/destroy">Destroy</a>
-                </td>
-            </tr>
-            <% }) %>
-        </table>
-        <span class="newUser"><a href="/users/new">New User</a></span>
+                    <td>
+                        <a href="/users/<%= user.id %>">Show</a>
+                        <a href="/users/<%= user.id %>/edit">Edit</a>
+                        <a href="/users/<%= user.id %>/destroy">Destroy</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+            <span class="newUser"><a href="/users/new">New User</a></span>
+        </div>
     </div>
-    </div>
 
-    <footer role="contentinfo" class="grid-item">
-        <div id="foot">
-            <div class="site-footer">
-                <div class="widget address">
-                    <h3>Address</h3>
-                    <p>Phone: (517) 703 6550</p>
-                    <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
-                </div>
-                <div class="widget event">
-                    <h3>Events</h3>
-                    <a href="http://localhost:5500/churchWeb/event/event.html">Upcoming events</a>
-                </div>
-                <div class="widget aboutus">
-                    <h3>About us</h3>
-                    <div><a href="http://localhost:5500/churchWeb/aboutus/mission-vision.html">Our Vison</a></div>
-                    <a href="http://localhost:3000/leaders">Pastor and Leaders</a>
-                </div>
-                <div class="widget service">
-                    <h3>Service</h3>
-                    <div><a href="http://localhost:5500/churchWeb/services/resources.html">Resources</a></div>
-                    <a href="http://localhost:5500/churchWeb/services/form/contact.html">Prayer Request</a>
-                </div>
-                <div class="widget social-media">
-                    <h3>Follow us</h3>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                </div>
+    <footer>
+        <div class="site-footer">
+            <div class="widget address">
+                <h3>Address</h3>
+                <p>Phone: (517) 703 6550</p>
+                <P>5841 Kalamazoo Ave SE, <br> Grand Rapids, MI 49508</P>
             </div>
-
+            <div class="widget event">
+                <h3>Events</h3>
+                <a href="http://localhost:5500/churchWeb/aboutus/mission-vision.html">Upcoming events</a>
+            </div>
+            <div class="widget aboutus">
+                <h3>About us</h3>
+                <div><a href="http://localhost:5500/churchWeb/aboutus/mission-vision.html">Our Vison</a></div>
+                <a href="http://localhost:3000/leaders">Pastor and Leaders</a>
+            </div>
+            <div class="widget service">
+                <h3>Service</h3>
+                <div><a href="http://localhost:5500/churchWeb/services/resources.html">Resources</a></div>
+                <a href="http://localhost:5500/churchWeb/services/form/contact.html">Prayer Request</a>
+            </div>
+            <div class="widget social-media">
+                <h3>Follow us</h3>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
             <div class="copy-right">&copy 2020 Word and Revival Ministry. All Rights Reserved.</div>
         </div>
     </footer>
