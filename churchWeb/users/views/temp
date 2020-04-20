@@ -1,2 +1,0 @@
-<textarea name="user[fname]" id="user_fname"> <%= user.fname %></textarea>
-    <textarea name="user[email]" id="user_email"><%= user.email %></textarea>
