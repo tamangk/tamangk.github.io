@@ -46,7 +46,3 @@ submitBtn.addEventListener('click', function() {
 
 });
 
-// document.getElementById('submit').onclick = function() {
-//     document.getElementById('submit').innerHTML = document.getElementById("userFullName").value;
-//
-// };
