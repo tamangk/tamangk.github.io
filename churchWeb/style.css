@@ -88,7 +88,7 @@ body {
 .navbar .icon {
     display: none;
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
       float: left;
@@ -106,21 +106,40 @@ body {
     .navbar a.hover {
         color: #66ff00;
     }
-    /* footer {
+} */
+@media screen and (max-width: 600px) {
+    .title {
+        display: none;
+    }
+    .navbar {
+        position: relative;
+        width: 60%;
+        right: 0;
+        top: -5px;
+        display: block;
+        /* background-color: #0af502; */
+    }
+    /* .navbar.responsive a {
+        display: inline;
+        text-align: left;
+        color: black;
+    } */
+    .navbar a {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        display: inline;
+    }
+    .navbar a:hover {
+        color: #0af502;
+    }
+    footer {
         position: fixed;
         bottom: 0;
     }
     .site-footer {
-        border: 2px sold red;
-    } */
-    /* .widget {
-        position: relative;
-        display: inline-table;
-        padding-left: 25%;
-    } */
-}
-@media screen and (max-width: 600px) {
-    .title {
+        border: 1px sold red;
+    }
+    /* .title {
         display: none;
     }
     .navbar.responsive .icon {
@@ -145,7 +164,7 @@ body {
     }
     .site-footer {
         border: 1px sold red;
-    }
+    } */
 }
 /*********************************************************
 * DROPDOWN
