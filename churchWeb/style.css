@@ -73,9 +73,9 @@ body {
     .navbar {
         position: relative;
         width: 70%;
-        height: 20px;
-        left: -5%;
+        left: -6%;
         right: 0;
+        background-color: #0af502;
         display: inline-table;
     }
     .navbar a {
