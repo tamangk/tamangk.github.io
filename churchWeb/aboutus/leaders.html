@@ -6,78 +6,41 @@
     <meta charset="utf-8">
     <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
     <meta http-equiv='x-ua-compatible' content="ie=edge">    <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <style>
-        .top-color {
-            top: 0;
-        }
         .leaders {
+            width: 80%;
             position: relative;
-            top: 100px;
-            font-size: 20px;
-            width: 100%;
+            left: 10%;
         }
         .row {
             position: relative;
-        }
-        .top {
-            top: 50px;
-            background-color: rgb(143, 194, 194);
-        }
-        .bottom {
-            top: 250px;
-            background-color: rgb(85, 97, 97);
+            padding-top: 7%;
         }
         .posi {
-            position: absolute;
-            font-size: 30px;
+            position: relative;
+            display: inline-table;
+            width: 15%;
+            padding-left: 8%;
         }
-        li {
-            font-size: 20px;
-        }
-        li:hover {
-            color: red;
-        }
-        .pastor {
-            left: 10%;
-        }
-        .elder {
-            left: 30%;
-        }
-        .deacon {
-            left: 50%;
-        }
-        .treasurer {
-            left: 75%;
-        }
-
-
-
-        .worship-leader {
-            left: 10%;
-        }
-        .youth-leader {
-            left: 30%;
-        }
-        .sunday-school {
-            left: 50%;
-        }
-        .secretary {
-            left: 75%;
+        .bottom {
+            padding-bottom: 10%;
         }
     </style>
 </head>
 
 <body>
-
     <div class="top-color">
-    <span class="social-media">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-youtube"></a>
-        <a href="#" class="fa fa-instagram"></a>
-    </span>
-        <span class="navbar">
-            <a href="../index.html">Home</a>
+        <div class="logo">
+            <div class="png">
+                <a href="../index.html"><img src="../images/logo.png" alt="logo" width="100px" height="100px"></a>
+            </div>
+            <div class="title">
+                <a href="../index.html">Word and Revival Ministry</a>
+            </div>
+        </div>
+        <span class="navbar" id="myNavbar">
+            <a href="../index.html" class="active">Home</a>
             <a href="../event/event.html">Event</a>
             <div class="dropdown">
                 <a href="">Service</a>
@@ -94,47 +57,44 @@
                 </div>
             </div>
             <a href="https://www.paypal.me/" target="_blank">Donate</a>
-        </span>
 
-        <span class="logo">
-            <a href="../index.html"><img src="../images/logo.png" alt="logo" width="120" height="115"></a>
-            <h4><a href="../index.html">Word and Revival Ministry</a></h4>
+            <a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
         </span>
     </div>
 
-    <span class="leaders">
-        <h1 style="text-align: center;">Pastor and Leaders</h1>
+    <div class="leaders">
+        <h1 style="text-align: center; padding-top: 5%">Pastor and Leaders</h1>
 
         <div class="row top">
-            <div class="posi pastor">Pastor
-                <li> GS. Tamang</li>
+            <div class="posi pastor"><h4>Pastor</h4>
+                <li>GS. Tamang</li>
             </div>
-            <div class="posi elder">Elder
+            <div class="posi elder"><h4>Elder</h4>
                 <li>Jaya Sarki</li>
-            </div>
-            <div class="posi deacon">Deacon
                 <li>Khadka Gurung</li>
+            </div>
+            <div class="posi deacon"><h4>Deacon</h4>
                 <li>Pema Tamang</li>
             </div>
-            <div class="posi treasurer">Treasurer
+            <div class="posi treasurer"><h4>Treasurer</h4>
                 <li>Karma Tamang</li>
             </div>
         </div>
         <div class="row bottom">
-            <div class="posi worship-leader">Worship Leader
+            <div class="posi worship-leader"><h4>Worship Leader</h4>
                 <li>Lashang Tamang</li>
             </div>
-            <div class="posi youth-leader">Youth Leader
+            <div class="posi youth-leader"><h4>Youth Leader</h4>
                 <li>Dilip Gurung</li>
             </div>
-            <div class="posi sunday-school">Sunday School Teacher
+            <div class="posi sunday-school"><h4>Sunday School Teacher</h4>
                 <li>Lalita Mongar</li>
             </div>
-            <div class="posi secretary">Secretary
-                <li>Falna</li>
+            <div class="posi secretary"><h4>Secretary</h4>
+                <li>Name</li>
             </div>
         </div>
-    </span>
+    </div>
 
     <footer role="contentinfo" class="grid-item">
         <div class="site-footer">
@@ -150,7 +110,7 @@
           <div class="widget aboutus">
             <h3>About us</h3>
             <div><a href="aboutus/mission-vision.html">Our Vison</a></div>
-            <a href="/leaders">Pastor and Leaders</a>
+            <a href="aboutus/leaders">Pastor and Leaders</a>
           </div>
           <div class="widget service">
             <h3>Service</h3>
